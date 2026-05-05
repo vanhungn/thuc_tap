@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+option csharp_namespace = "grpcClientLopHoc.proto";
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+
+package lopHoc;
+
+service SvServiceLopHoc {
+  rpc GetAllLopHoc (google.protobuf.Empty) returns (listLopHoc);
+	
+}
+message GiaoVien {
+  int32 id = 1;
+  string maGiaoVien = 2;
+  string ten = 3;
+  google.protobuf.Timestamp ngaySinh = 4;
+}
+
+message LopHoc {
+  int32 id = 1;
+  string maLopHoc = 2;
+  string tenLopHoc = 3;
+  string monHoc = 4;
+  GiaoVien giaoVien = 5;
+}
+message listLopHoc{
+	repeated LopHoc items =1;
+}

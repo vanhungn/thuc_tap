@@ -1,0 +1,53 @@
+syntax = "proto3";
+
+option csharp_namespace = "Clients.Protos";
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+
+package sinhvien;
+
+service SvService {
+  rpc GetAll (google.protobuf.Empty) returns (ListSinhVien);
+  rpc GetById (MaSinhVien) returns (SinhVien);
+  rpc Add (SinhVien) returns (BoolResponse);
+  rpc Update (SinhVien) returns (BoolResponse);
+  rpc Delete (SinhVienRequest) returns (BoolResponse);
+}
+
+message SinhVienRequest {
+  int32 id = 1;
+}
+message MaSinhVien{
+	string Masv = 1;
+}
+message BoolResponse{
+	bool Success = 1;
+}
+message GiaoVien {
+  int32 id = 1;
+  string maGiaoVien = 2;
+  string ten = 3;
+  google.protobuf.Timestamp ngaySinh = 4;
+}
+
+message LopHoc {
+  int32 id = 1;
+  string maLopHoc = 2;
+  string tenLopHoc = 3;
+  string monHoc = 4;
+  GiaoVien giaoVien = 5;
+}
+
+message SinhVien {
+  int32 id = 1;
+  string maSinhVien = 2;
+  string ten = 3;
+  string diaChi = 4;
+  google.protobuf.Timestamp ngaySinh = 5;
+  LopHoc lopHoc = 6;
+}
+
+message ListSinhVien {
+  repeated SinhVien items = 1;
+}

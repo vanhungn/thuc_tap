@@ -1,0 +1,4 @@
+obj\Release\net7.0\Protos/Sinhvien.cs \
+obj\Release\net7.0\Protos/SinhvienGrpc.cs: C:/Users/NGUYEN VAN HUNG/.nuget/packages/grpc.tools/2.80.0/build/native/include/google/protobuf/empty.proto\
+ C:/Users/NGUYEN VAN HUNG/.nuget/packages/grpc.tools/2.80.0/build/native/include/google/protobuf/timestamp.proto\
+ Protos/sinhvien.proto

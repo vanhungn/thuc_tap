@@ -1,0 +1,11 @@
+﻿@page "/weather"
+@using Blazorise.Charts
+@using GrpcClient.model
+@using grpcClientSinhVien.Protos
+@using Google.Protobuf.WellKnownTypes
+@inject SvService.SvServiceClient _client
+<h3 class ="title">Biểu đồ sinh viên theo lớp</h3>
+
+<div class="chartas">
+    <PieChart TItem="double" @ref="pieChart"/>
+</div>

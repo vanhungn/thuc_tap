@@ -1,0 +1,104 @@
+﻿@page "/"
+@using Microsoft.AspNetCore.Components.Forms
+
+
+<PageTitle>Index</PageTitle>
+
+<div>
+    <select class="selectSearch" @onchange='(e) => HandlerSearch(e.Value?.ToString() ?? "")'>
+        <option value="">--chon ma sv--</option>
+        @foreach (var i in listselect)
+        {
+            <option value="@i.MaSinhVien">
+                @i.MaSinhVien
+            </option>
+        }
+    </select>
+</div>
+<EditForm Model="model" OnValidSubmit="HandleValidSubmit" class="form">
+    <DataAnnotationsValidator />
+    <div class="@(hideForm ? "hideEnterForm" : "noneEnterForm")">
+        <h1 style="text-align:center">
+            @(createOrUpdate == true ? "THÊM SINH VIÊN" : "SỬA SINH VIÊN")
+        </h1>
+        <div class="enterForm">
+            <div>
+                <p>Tên Sinh Viên*</p>
+                <input class="inputForm" @bind="model.Ten" />
+                <ValidationMessage For="@(() => model.Ten)" />
+            </div>
+            <div>
+                <p>Ngày sinh*</p>
+                <input type="date" class="inputForm" @bind="model.NgaySinh" />
+                <ValidationMessage For="@(() => model.NgaySinh)" />
+            </div>
+            <div>
+                <p>Địa chỉ*</p>
+                <input class="inputForm" @bind="model.DiaChi" />
+                <ValidationMessage For="@(() => model.DiaChi)" />
+            </div>
+            <div>
+                <p>Lớp học*</p>
+                <select class="inputForm" @bind="model.LopHoc.Id">
+                    <option value="">-- Chọn lớp --</option>
+                    @foreach (var i in listLopHoc)
+                    {
+                        <option value="@i.Id">@i.TenLopHoc</option>
+                    }
+                </select>
+                <ValidationMessage For="@(() => model.LopHocId)" />
+            </div>
+        </div>
+        <div class="formButton">
+            <button class="btnSave" type="submit">Save</button>
+            <button type="button" class="btnReset" @onclick="HandleReset">Reset</button>
+        </div>
+    </div>
+</EditForm>
+<table>
+    <thead>
+        <tr>
+            <th>Mã Sinh Viên</th>
+            <th>Tên Sinh Viên</th>
+            <th>Ngày sinh</th>
+            <th>Địa chỉ</th>
+            <th>Lớp học</th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var i in list)
+        {
+            <tr>
+                <td>@i.MaSinhVien</td>
+                <td>@i.Ten</td>
+                <td>@i.NgaySinh.ToString("dd/MM/yyyy")</td>
+                <td>@i.DiaChi</td>
+                <td>@i.LopHoc?.TenLopHoc</td>
+                <td class="menu">
+                    <button @onclick="() => Menu(i.Id)" style="background:none;border:none;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                             viewBox="0 0 24 24" fill="none" stroke="black"
+                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                    </button>
+
+                    @if (boolMenu && i.Id == chooseMenu)
+                    {
+                        <div class="toolMenu">
+                            <button class="btn_Them" @onclick="() => HandleClickThem()">Them</button>
+                            <button class="btn_Sua" @onclick="() => HandleClickSua(i.Id)">Sua</button>
+                            <button class="btn_Xoa" @onclick="() => HandlerClickXoa(i.Id)">Xoa</button>
+                        </div>
+                    }
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

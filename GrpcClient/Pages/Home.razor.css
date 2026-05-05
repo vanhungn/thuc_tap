@@ -1,0 +1,157 @@
+﻿table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial;
+    font-size: 14px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    margin: 50px 0;
+}
+
+thead {
+    background-color: #2563eb;
+    color: white;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+tbody tr:hover {
+    background-color: #f1f5f9;
+    transition: 0.2s;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.menu {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.toolMenu {
+    width: 100px;
+    position: absolute;
+    left: -10%;
+    top: -50%;
+    display: flex;
+    flex-direction: column;
+    z-index: 100
+}
+
+    .toolMenu button {
+        width: 100%;
+        padding: 8px 18px;
+        border: none;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        align-items: center;
+        gap: 6px;
+    }
+
+.btn_Them {
+    background-color: #22c55e;
+    color: white;
+}
+
+.btn_Sua {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.btn_Xoa {
+    background-color: #ef4444;
+    color: white;
+}
+
+input {
+    margin-bottom: 20px;
+    width: 40%;
+    padding: 10px 14px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #1e293b;
+    background-color: #f8fafc;
+    transition: all 0.2s ease;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.form {
+    width: 80%;
+    margin: auto;
+}
+
+.enterForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.inputForm {
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid gray
+}
+
+.error {
+    color: red;
+    font-size: 11px;
+}
+
+.formButton {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.btnSave {
+    padding: 5px 10px;
+    background-color: blue;
+    border: none;
+    border-radius: 3px;
+    color: #fff
+}
+
+    .btnSave:hover {
+        background-color: darkblue;
+    }
+
+.btnReset {
+    padding: 5px 10px;
+    background-color: red;
+    border: none;
+    border-radius: 3px;
+    color: #fff
+}
+
+    .btnReset:hover {
+        background-color: darkred;
+    }
+
+.selectSearch {
+    width: 20%;
+    padding: 5px;
+}
+
+.noneEnterForm {
+    display: none;
+}
+
+.hideEnterForm {
+    display: block;
+}
