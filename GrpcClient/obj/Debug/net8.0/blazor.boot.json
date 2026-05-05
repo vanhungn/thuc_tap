@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "GrpcClient",
   "resources": {
-    "hash": "sha256-0u3K8eAjAWUnbUwHR6XhH1gz3saLy/lH7YHkqEBuIj8=",
+    "hash": "sha256-MQPj2equQsp/FOEyfQlDSYpOx2bEcqKS97CJFor1AAE=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-nElGk+CZFyq0PbPm4JU8avD6lER7x9Z1C54BK7qY12Q="
     },
@@ -222,10 +222,10 @@
       "mscorlib.wasm": "sha256-UzRTTeY8BezBltrUF59UgvVNxbmnZS3LeowarsPY8+Y=",
       "netstandard.wasm": "sha256-xHQSNwqHm8E9DM86qW7CTJoRXXsQuGmPeNipDwQFNr8=",
       "System.Private.CoreLib.wasm": "sha256-N9/Djwpe2mX4HdyhCGu9jrxG/DSYKoTPbtsIOv6VFDk=",
-      "GrpcClient.wasm": "sha256-t6B7TReDiojoJobDla5GsC7FX4nj9LFgar0fT6HQXVY="
+      "GrpcClient.wasm": "sha256-NOUw7uRckTFIqJGFAiASGB4CF8bI40445OWo8DVYBwA="
     },
     "pdb": {
-      "GrpcClient.pdb": "sha256-jpxiJJZXhAoYLN3kTm6BACoyPLoVGV9OV+N2bSUmN/E="
+      "GrpcClient.pdb": "sha256-+qx2BhT1u7Js+qxDAg8doLTAOcS3ykPIS0vXtlf64/w="
     },
     "libraryInitializers": {
       "_content/AntDesign/AntDesign.d05dnpfa5s.lib.module.js": "sha256-Y7oJ7/rOncGnhfBrDAPc045cW9bF4cp1INbpZClDsxM="

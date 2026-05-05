@@ -1101,6 +1101,6 @@ C:\Users\NGUYEN VAN HUNG\source\repos\baitap1\GrpcClient\obj\Debug\net8.0\refint
 C:\Users\NGUYEN VAN HUNG\source\repos\baitap1\GrpcClient\obj\Debug\net8.0\GrpcClient.pdb
 C:\Users\NGUYEN VAN HUNG\source\repos\baitap1\GrpcClient\obj\Debug\net8.0\ref\GrpcClient.dll
 C:\Users\NGUYEN VAN HUNG\source\repos\baitap1\GrpcClient\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
-C:\Users\NGUYEN VAN HUNG\source\repos\baitap1\GrpcClient\obj\Debug\net8.0\compressed\2t417jcjbx-1y41s1hxpb.gz
-C:\Users\NGUYEN VAN HUNG\source\repos\baitap1\GrpcClient\obj\Debug\net8.0\compressed\7ucjr9smt0-mew281qxjm.gz
-C:\Users\NGUYEN VAN HUNG\source\repos\baitap1\GrpcClient\obj\Debug\net8.0\compressed\ahjopnjapc-ann12vv6by.gz
+C:\Users\NGUYEN VAN HUNG\source\repos\baitap1\GrpcClient\obj\Debug\net8.0\compressed\2t417jcjbx-s6ko1m3mty.gz
+C:\Users\NGUYEN VAN HUNG\source\repos\baitap1\GrpcClient\obj\Debug\net8.0\compressed\7ucjr9smt0-iejbydgbfo.gz
+C:\Users\NGUYEN VAN HUNG\source\repos\baitap1\GrpcClient\obj\Debug\net8.0\compressed\ahjopnjapc-bbfsamzi8d.gz

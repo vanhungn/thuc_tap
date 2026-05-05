@@ -14,9 +14,10 @@ C:\Users\NGUYEN VAN HUNG\source\repos\baitap1\Clients\obj\Debug\net7.0\Clients.G
 C:\Users\NGUYEN VAN HUNG\source\repos\baitap1\Clients\obj\Debug\net7.0\Clients.AssemblyInfoInputs.cache
 C:\Users\NGUYEN VAN HUNG\source\repos\baitap1\Clients\obj\Debug\net7.0\Clients.AssemblyInfo.cs
 C:\Users\NGUYEN VAN HUNG\source\repos\baitap1\Clients\obj\Debug\net7.0\Clients.csproj.CoreCompileInputs.cache
-C:\Users\NGUYEN VAN HUNG\source\repos\baitap1\Clients\obj\Debug\net7.0\Clients.csproj.CopyComplete
 C:\Users\NGUYEN VAN HUNG\source\repos\baitap1\Clients\obj\Debug\net7.0\Clients.dll
 C:\Users\NGUYEN VAN HUNG\source\repos\baitap1\Clients\obj\Debug\net7.0\refint\Clients.dll
 C:\Users\NGUYEN VAN HUNG\source\repos\baitap1\Clients\obj\Debug\net7.0\Clients.pdb
 C:\Users\NGUYEN VAN HUNG\source\repos\baitap1\Clients\obj\Debug\net7.0\Clients.genruntimeconfig.cache
 C:\Users\NGUYEN VAN HUNG\source\repos\baitap1\Clients\obj\Debug\net7.0\ref\Clients.dll
+C:\Users\NGUYEN VAN HUNG\source\repos\baitap1\Clients\obj\Debug\net7.0\Clients.sourcelink.json
+C:\Users\NGUYEN VAN HUNG\source\repos\baitap1\Clients\obj\Debug\net7.0\Clients.csproj.Up2Date

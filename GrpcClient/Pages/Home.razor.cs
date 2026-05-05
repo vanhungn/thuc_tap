@@ -1,4 +1,4 @@
-using Google.Protobuf.WellKnownTypes;
+﻿using Google.Protobuf.WellKnownTypes;
 using GrpcClient.model;
 using grpcClientLopHoc.proto;
 using grpcClientSinhVien.Protos;
@@ -23,17 +23,12 @@ namespace GrpcClient.Pages
 
         ModelSinhVien model = new()
         {
-            Id = 0,
             MaSinhVien = "",
             Ten = "",
             DiaChi = "",
             NgaySinh = DateTime.Now,
             LopHoc = new ModelLopHoc
             {
-                Id = 0,
-                TenLopHoc = "",
-                MaLopHoc = "",
-                MonHoc = "",
                 GiaoVien = new ModelGiaoVien()
             }
         };
@@ -68,7 +63,14 @@ namespace GrpcClient.Pages
                     TenLopHoc = x.LopHoc.TenLopHoc,
                     MaLopHoc = x.LopHoc.MaLopHoc,
                     MonHoc = x.LopHoc.MonHoc,
-                    GiaoVien = new ModelGiaoVien()
+                    GiaoVien = new ModelGiaoVien
+                    {
+                        Id = x.LopHoc.GiaoVien.Id,
+                        MaGiaoVien = x.LopHoc.GiaoVien.MaGiaoVien,
+                        NgaySinh = x.LopHoc.GiaoVien.NgaySinh.ToDateTime(),
+                        Ten = x.LopHoc.GiaoVien.Ten,
+
+                    }
                 }
             }).ToList();
         }
@@ -82,7 +84,14 @@ namespace GrpcClient.Pages
                 TenLopHoc = x.TenLopHoc,
                 MaLopHoc = x.MaLopHoc,
                 MonHoc = x.MonHoc,
-                GiaoVien = new ModelGiaoVien()
+                GiaoVien = new ModelGiaoVien
+                {
+                    Id = x.GiaoVien.Id,
+                    MaGiaoVien = x.GiaoVien.MaGiaoVien,
+                    NgaySinh = x.GiaoVien.NgaySinh.ToDateTime(),
+                    Ten = x.GiaoVien.Ten,
+
+                }
             }).ToList();
         }
 
@@ -109,6 +118,7 @@ namespace GrpcClient.Pages
             createOrUpdate = false;
             Menu(0);
             var selected = list.First(x => x.Id == id);
+            
             model = new ModelSinhVien
             {
                 Id = selected.Id,
@@ -122,9 +132,17 @@ namespace GrpcClient.Pages
                     TenLopHoc = selected.LopHoc.TenLopHoc,
                     MaLopHoc = selected.LopHoc.MaLopHoc,
                     MonHoc = selected.LopHoc.MonHoc,
-                    GiaoVien = new ModelGiaoVien()
+                    GiaoVien = new ModelGiaoVien
+                    {
+                        Id = selected.LopHoc.GiaoVien.Id,
+                        MaGiaoVien = selected.LopHoc.GiaoVien.MaGiaoVien,
+                        NgaySinh = selected.LopHoc.GiaoVien.NgaySinh,
+                        Ten = selected.LopHoc.GiaoVien.Ten,
+
+                    }
                 }
             };
+            Console.WriteLine(Timestamp.FromDateTime(model.NgaySinh.ToUniversalTime()).ToDateTime());
         }
 
         async Task HandlerClickXoa(int id)
@@ -162,7 +180,14 @@ namespace GrpcClient.Pages
                         TenLopHoc = res.LopHoc.TenLopHoc,
                         MaLopHoc = res.LopHoc.MaLopHoc,
                         MonHoc = res.LopHoc.MonHoc,
-                        GiaoVien = new ModelGiaoVien()
+                       GiaoVien = new ModelGiaoVien
+                    {
+                        Id = res.LopHoc.GiaoVien.Id,
+                        MaGiaoVien = res.LopHoc.GiaoVien.MaGiaoVien,
+                        NgaySinh = res.LopHoc.GiaoVien.NgaySinh.ToDateTime(),
+                        Ten = res.LopHoc.GiaoVien.Ten,
+
+                    }
                     }
                 }
             };
@@ -178,24 +203,32 @@ namespace GrpcClient.Pages
 
         async Task HandleValidSubmit()
         {
+            try
+            {
+                var selectedLop = listLopHoc.FirstOrDefault(x => x.Id == model.LopHoc.Id);
+                if (selectedLop == null)
+                {
+                    await JS.InvokeVoidAsync("alert", "Bạn chưa chọn lớp!");
+                    return;
+                }
 
-            var selectedLop = listLopHoc.FirstOrDefault(x => x.Id == model.LopHoc.Id);
-            if (selectedLop == null)
-            {
-                await JS.InvokeVoidAsync("alert", "Ban chua chon lop!");
-                return;
-            }
-            model.LopHoc = selectedLop;
+                model.LopHoc = selectedLop;
 
-            bool result = createOrUpdate == true ? await Create() : await Update();
-            if (result)
-            {
-                await JS.InvokeVoidAsync("alert", createOrUpdate == true ? "Them thanh cong!" : "Sua thanh cong!");
-                await Load();
+                bool result = createOrUpdate == true ? await Create() : await Update();
+
+                if (result)
+                {
+                    await JS.InvokeVoidAsync("alert", createOrUpdate == true ? "Thêm thành công!" : "Sửa thành công!");
+                    await Load();
+                }
+                else
+                {
+                    await JS.InvokeVoidAsync("alert", "Ngay sinh phai lon hon 10 tuoi!");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                await JS.InvokeVoidAsync("alert", "That bai!");
+                await JS.InvokeVoidAsync("alert", ex.Message); 
             }
         }
 
@@ -212,15 +245,25 @@ namespace GrpcClient.Pages
                     Id = model.LopHoc.Id,
                     TenLopHoc = model.LopHoc.TenLopHoc,
                     MaLopHoc = model.LopHoc.MaLopHoc,
-                    MonHoc = model.LopHoc.MonHoc
-                }
+                    MonHoc = model.LopHoc.MonHoc,
+                    GiaoVien = new grpcClientSinhVien.Protos.GiaoVien
+                    {
+                        Id = model.LopHoc.GiaoVien.Id,
+                        MaGiaoVien = model.LopHoc.GiaoVien.MaGiaoVien,
+                        NgaySinh =Timestamp.FromDateTime( model.LopHoc.GiaoVien.NgaySinh.ToUniversalTime()),
+                        Ten = model.LopHoc.GiaoVien.Ten,
+
+                    }
+                },
+               
+
             });
             return res.Success;
         }
 
         public async Task<bool> Update()
         {
-           
+            Console.WriteLine(model);
             var res = await _client.UpdateAsync(new SinhVien
             {
                 Id = model.Id,
@@ -233,9 +276,18 @@ namespace GrpcClient.Pages
                     Id = model.LopHoc.Id,
                     TenLopHoc = model.LopHoc.TenLopHoc,
                     MaLopHoc = model.LopHoc.MaLopHoc,
-                    MonHoc = model.LopHoc.MonHoc
+                    MonHoc = model.LopHoc.MonHoc,
+                    GiaoVien = new grpcClientSinhVien.Protos.GiaoVien
+                    {
+                        Id = model.LopHoc.GiaoVien.Id,
+                        MaGiaoVien = model.LopHoc.GiaoVien.MaGiaoVien,
+                        NgaySinh = Timestamp.FromDateTime(model.LopHoc.GiaoVien.NgaySinh.ToUniversalTime()),
+                        Ten = model.LopHoc.GiaoVien.Ten,
+
+                    }
                 }
             });
+            Console.WriteLine($"Success: {res.Success}, Message: {res.Message}");
             return res.Success;
         }
     }

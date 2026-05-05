@@ -64,6 +64,7 @@ namespace Server.Controller
         {
             try
             {
+               
                 ModelSinhVien sv = new ModelSinhVien()
                 {
                     Id = request.Id,
@@ -116,6 +117,7 @@ namespace Server.Controller
 
             try
             {
+            
             ModelSinhVien sv = new ModelSinhVien()
             {
                 DiaChi = request.DiaChi,

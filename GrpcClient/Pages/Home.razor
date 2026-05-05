@@ -14,6 +14,7 @@
             </option>
         }
     </select>
+    <button class="btn_Them" @onclick="() => HandleClickThem()">Them</button>
 </div>
 <EditForm Model="model" OnValidSubmit="HandleValidSubmit" class="form">
     <DataAnnotationsValidator />
@@ -90,7 +91,7 @@
                     @if (boolMenu && i.Id == chooseMenu)
                     {
                         <div class="toolMenu">
-                            <button class="btn_Them" @onclick="() => HandleClickThem()">Them</button>
+                           
                             <button class="btn_Sua" @onclick="() => HandleClickSua(i.Id)">Sua</button>
                             <button class="btn_Xoa" @onclick="() => HandlerClickXoa(i.Id)">Xoa</button>
                         </div>

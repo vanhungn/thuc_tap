@@ -1,10 +1,17 @@
 ﻿.chartas {
-    width: 400px !important;
+    width: 50% !important;
     height: 400px !important;
     margin: 0 auto;
-    display: block;
 }
-
+.chartBar {
+    width: 100% !important;
+    height: 400px !important;
+    margin: 0 auto;
+}
 .title {
     text-align: center
+}
+.chart{
+    display:grid;
+    grid-template-columns:1fr 1fr;
 }

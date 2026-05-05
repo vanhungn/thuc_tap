@@ -2,7 +2,6 @@ C:\Users\NGUYEN VAN HUNG\source\repos\baitap1\baitap1\bin\Debug\baitap1.exe.conf
 C:\Users\NGUYEN VAN HUNG\source\repos\baitap1\baitap1\bin\Debug\baitap1.exe
 C:\Users\NGUYEN VAN HUNG\source\repos\baitap1\baitap1\bin\Debug\baitap1.pdb
 C:\Users\NGUYEN VAN HUNG\source\repos\baitap1\baitap1\obj\Debug\baitap1.csproj.AssemblyReference.cache
-C:\Users\NGUYEN VAN HUNG\source\repos\baitap1\baitap1\obj\Debug\baitap1.csproj.SuggestedBindingRedirects.cache
 C:\Users\NGUYEN VAN HUNG\source\repos\baitap1\baitap1\obj\Debug\baitap1.csproj.CoreCompileInputs.cache
 C:\Users\NGUYEN VAN HUNG\source\repos\baitap1\baitap1\obj\Debug\baitap1.exe
 C:\Users\NGUYEN VAN HUNG\source\repos\baitap1\baitap1\obj\Debug\baitap1.pdb

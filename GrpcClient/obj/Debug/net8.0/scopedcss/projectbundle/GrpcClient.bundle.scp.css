@@ -320,12 +320,19 @@ input[b-t4vt2ba2v3] {
 }
 /* /Pages/Weather.razor.rz.scp.css */
 .chartas[b-kwrb0wky1o] {
-    width: 400px !important;
+    width: 50% !important;
     height: 400px !important;
     margin: 0 auto;
-    display: block;
 }
-
+.chartBar[b-kwrb0wky1o] {
+    width: 100% !important;
+    height: 400px !important;
+    margin: 0 auto;
+}
 .title[b-kwrb0wky1o] {
     text-align: center
+}
+.chart[b-kwrb0wky1o]{
+    display:grid;
+    grid-template-columns:1fr 1fr;
 }
