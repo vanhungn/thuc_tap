@@ -1,5 +1,5 @@
 ﻿using FluentNHibernate.Mapping;
-using Server.model;
+using Server_Shared.model;
 
 public class GiaoVienMap : ClassMap<ModelGiaoVien>
 {

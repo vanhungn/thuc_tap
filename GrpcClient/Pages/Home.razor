@@ -1,105 +1,113 @@
 ﻿@page "/"
-@using Microsoft.AspNetCore.Components.Forms
-
+@using AntDesign
+@using Server_Shared.model
 
 <PageTitle>Index</PageTitle>
 
-<div>
-    <select class="selectSearch" @onchange='(e) => HandlerSearch(e.Value?.ToString() ?? "")'>
-        <option value="">--chon ma sv--</option>
-        @foreach (var i in listselect)
-        {
-            <option value="@i.MaSinhVien">
-                @i.MaSinhVien
-            </option>
-        }
-    </select>
-    <button class="btn_Them" @onclick="() => HandleClickThem()">Them</button>
+<!-- Search & Add -->
+<div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
+    <Select Style="width:200px"
+            Placeholder="-- Chon ma SV --"
+            TItem="ModelSinhVien"
+            TItemValue="string"
+            DataSource="listselect.AsEnumerable()"
+            LabelName="@nameof(ModelSinhVien.MaSinhVien)"
+            ValueName="@nameof(ModelSinhVien.MaSinhVien)"
+            OnSelectedItemChanged="@(async (ModelSinhVien sv) => await HandlerSearch(sv?.MaSinhVien ?? ""))"
+            AllowClear />
+    <Button Type="@ButtonType.Primary"
+            Icon="@IconType.Outline.Plus"
+            OnClick="HandleClickThem">
+        Them
+    </Button>
 </div>
-<EditForm Model="model" OnValidSubmit="HandleValidSubmit" class="form">
-    <DataAnnotationsValidator />
-    <div class="@(hideForm ? "hideEnterForm" : "noneEnterForm")">
-        <h1 style="text-align:center">
-            @(createOrUpdate == true ? "THÊM SINH VIÊN" : "SỬA SINH VIÊN")
-        </h1>
-        <div class="enterForm">
-            <div>
-                <p>Tên Sinh Viên*</p>
-                <input class="inputForm" @bind="model.Ten" />
-                <ValidationMessage For="@(() => model.Ten)" />
-            </div>
-            <div>
-                <p>Ngày sinh*</p>
-                <input type="date" class="inputForm" @bind="model.NgaySinh" />
-                <ValidationMessage For="@(() => model.NgaySinh)" />
-            </div>
-            <div>
-                <p>Địa chỉ*</p>
-                <input class="inputForm" @bind="model.DiaChi" />
-                <ValidationMessage For="@(() => model.DiaChi)" />
-            </div>
-            <div>
-                <p>Lớp học*</p>
-                <select class="inputForm" @bind="model.LopHoc.Id">
-                    <option value="">-- Chọn lớp --</option>
-                    @foreach (var i in listLopHoc)
-                    {
-                        <option value="@i.Id">@i.TenLopHoc</option>
-                    }
-                </select>
-                <ValidationMessage For="@(() => model.LopHocId)" />
-            </div>
-        </div>
-        <div class="formButton">
-            <button class="btnSave" type="submit">Save</button>
-            <button type="button" class="btnReset" @onclick="HandleReset">Reset</button>
-        </div>
-    </div>
-</EditForm>
-<table>
-    <thead>
-        <tr>
-            <th>Mã Sinh Viên</th>
-            <th>Tên Sinh Viên</th>
-            <th>Ngày sinh</th>
-            <th>Địa chỉ</th>
-            <th>Lớp học</th>
-            <th></th>
-        </tr>
-    </thead>
 
-    <tbody>
-        @foreach (var i in list)
-        {
-            <tr>
-                <td>@i.MaSinhVien</td>
-                <td>@i.Ten</td>
-                <td>@i.NgaySinh.ToString("dd/MM/yyyy")</td>
-                <td>@i.DiaChi</td>
-                <td>@i.LopHoc?.TenLopHoc</td>
-                <td class="menu">
-                    <button @onclick="() => Menu(i.Id)" style="background:none;border:none;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                             viewBox="0 0 24 24" fill="none" stroke="black"
-                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="3" y1="6" x2="21" y2="6"></line>
-                            <line x1="3" y1="12" x2="21" y2="12"></line>
-                            <line x1="3" y1="18" x2="21" y2="18"></line>
-                        </svg>
-                    </button>
+<!-- Form -->
+@if (hideForm)
+{
+    <Card Style="margin-bottom:24px;">
+        <TitleTemplate>
+            <Text Strong Style="font-size:18px;">
+                @(createOrUpdate == true ? "THEM SINH VIEN" : "SUA SINH VIEN")
+            </Text>
+        </TitleTemplate>
+        <Body>
+            <Form Model="model"
+                  OnFinish="HandleValidSubmit"
+                  Layout="@FormLayout.Vertical">
+                <Row Gutter="16">
+                    <AntDesign.Col Span="12">
+                        <FormItem Label="Ten Sinh Vien *">
+                            <Input @bind-Value="@context.Ten" Placeholder="Nhap ten sinh vien" />
+                        </FormItem>
+                    </AntDesign.Col>
+                    <AntDesign.Col Span="12">
+                        <FormItem Label="Ngay Sinh *">
+                            <DatePicker @bind-Value="@context.NgaySinh" Style="width:100%" />
+                        </FormItem>
+                    </AntDesign.Col>
+                    <AntDesign.Col Span="12">
+                        <FormItem Label="Dia Chi *">
+                            <Input @bind-Value="@context.DiaChi" Placeholder="Nhap dia chi" />
+                        </FormItem>
+                    </AntDesign.Col>
+                    <AntDesign.Col Span="12">
+                        <FormItem Label="Lop Hoc *">
+                            <Select Style="width:100%"
+                                    Placeholder="-- Chon lop --"
+                                    TItem="ModelLopHoc"
+                                    TItemValue="int"
+                                    DataSource="listLopHoc.AsEnumerable()"
+                                    LabelName="@nameof(ModelLopHoc.TenLopHoc)"
+                                    ValueName="@nameof(ModelLopHoc.Id)"
+                                    @bind-Value="@context.LopHoc.Id" />
+                        </FormItem>
+                    </AntDesign.Col>
+                </Row>
+                <div style="display:flex; gap:8px; justify-content:flex-end; margin-top:8px;">
+                    <Button Type="@ButtonType.Primary"
+                            HtmlType="submit"
+                            Icon="@IconType.Outline.Save">
+                        Save
+                    </Button>
+                    <Button OnClick="HandleReset"
+                            Icon="@IconType.Outline.Reload">
+                        Reset
+                    </Button>
+                </div>
+            </Form>
+        </Body>
+    </Card>
+}
 
-                    @if (boolMenu && i.Id == chooseMenu)
-                    {
-                        <div class="toolMenu">
-                           
-                            <button class="btn_Sua" @onclick="() => HandleClickSua(i.Id)">Sua</button>
-                            <button class="btn_Xoa" @onclick="() => HandlerClickXoa(i.Id)">Xoa</button>
-                        </div>
-                    }
-
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
-
+<!-- Table -->
+<Table DataSource="list.AsEnumerable()" TItem="ModelSinhVien" Bordered>
+    <Column Title="Ma Sinh Vien" @bind-Field="@context.MaSinhVien" TData="string" />
+    <Column Title="Ten Sinh Vien" @bind-Field="@context.Ten" TData="string" />
+    <Column Title="Ngay Sinh" @bind-Field="@context.NgaySinh" TData="DateTime">
+        @context.NgaySinh.ToString("dd/MM/yyyy")
+    </Column>
+    <Column Title="Dia Chi" @bind-Field="@context.DiaChi" TData="string" />
+    <Column Title="Lop Hoc" TData="string">
+        @context.LopHoc?.TenLopHoc
+    </Column>
+    <ActionColumn Title="Hanh Dong">
+        <Space>
+            <SpaceItem>
+                <Button Type="@ButtonType.Default"
+                        Icon="@IconType.Outline.Edit"
+                        OnClick="@(() => HandleClickSua(context.Id))">
+                    Sua
+                </Button>
+            </SpaceItem>
+            <SpaceItem>
+                <Popconfirm Title="Ban co chac muon xoa?"
+                            OnConfirm="@(() => HandlerClickXoa(context.Id))"
+                            OkText="Xoa"
+                            CancelText="Huy">
+                    <Button Danger Icon="@IconType.Outline.Delete">Xoa</Button>
+                </Popconfirm>
+            </SpaceItem>
+        </Space>
+    </ActionColumn>
+</Table>

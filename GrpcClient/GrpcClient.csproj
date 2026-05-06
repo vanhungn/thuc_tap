@@ -1,32 +1,26 @@
-<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
-
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="AntDesign" Version="1.6.1" />
-    <PackageReference Include="Blazorise" Version="2.1.1" />
-    <PackageReference Include="Blazorise.Bootstrap" Version="2.1.1" />
-    <PackageReference Include="Blazorise.Charts" Version="2.1.1" />
-    <PackageReference Include="Blazorise.Icons.FontAwesome" Version="2.1.1" />
-    <PackageReference Include="Google.Protobuf" Version="3.34.1" />
-    <PackageReference Include="Grpc.Net.Client" Version="2.80.0" />
-    <PackageReference Include="Grpc.Net.Client.Web" Version="2.80.0" />
-    <PackageReference Include="Grpc.Tools" Version="2.80.0">
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.26" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.26" PrivateAssets="all" />
-  </ItemGroup>
+﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
 
 	<ItemGroup>
-		<Protobuf Include="Protos\greet.proto" GrpcServices="Client" />
-		<Protobuf Include="Protos\lophoc.proto" GrpcServices="Client" />
-		<Protobuf Include="Protos\sinhvien.proto" GrpcServices="Client" />
+		<PackageReference Include="AntDesign" Version="1.6.1" />
+		<PackageReference Include="AntDesign.Charts" Version="0.9.0" />
+		<PackageReference Include="Blazorise" Version="2.1.1" />
+		<PackageReference Include="Blazorise.Bootstrap" Version="2.1.1" />
+		<PackageReference Include="Blazorise.Charts" Version="2.1.1" />
+		<PackageReference Include="Blazorise.Icons.FontAwesome" Version="2.1.1" />
+		<PackageReference Include="Google.Protobuf" Version="3.34.1" />
+		<PackageReference Include="Grpc.Net.Client" Version="2.80.0" />
+		<PackageReference Include="Grpc.Net.Client.Web" Version="2.80.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.26" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.26" PrivateAssets="all" />
 	</ItemGroup>
 
+	<!-- Server_Shared chứa ISVController, ILHController và protobuf-net.Grpc -->
+	<ItemGroup>
+		<ProjectReference Include="..\Server_Shared\Server_Shared.csproj" />
+	</ItemGroup>
 </Project>

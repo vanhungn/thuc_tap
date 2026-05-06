@@ -1,5 +1,5 @@
 ﻿using Microsoft.Data.SqlClient;
-using Server.model;
+using Server_Shared.model;
 using System.Collections.Generic;
 using NHibernate;
 using NHibernate.Linq;

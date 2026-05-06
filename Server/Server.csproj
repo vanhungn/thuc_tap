@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
 	<PropertyGroup>
-		<TargetFramework>net7.0</TargetFramework>
+		<TargetFramework>net8.0</TargetFramework>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
 	</PropertyGroup>
@@ -20,9 +20,17 @@
 		<PackageReference Include="FluentNHibernate" Version="3.4.1" />
 		<PackageReference Include="Grpc.AspNetCore" Version="2.49.0" />
 		<PackageReference Include="Grpc.AspNetCore.Web" Version="2.49.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.3.9" />
 		<PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.0" />
 		<PackageReference Include="NHibernate" Version="5.6.0" />
+		<PackageReference Include="protobuf-net.Grpc" Version="1.2.2" />
+		<PackageReference Include="protobuf-net.Grpc.AspNetCore" Version="1.2.2" />
 		<PackageReference Include="System.Data.SqlClient" Version="4.9.1" />
+		
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Server_Shared\Server_Shared.csproj" />
 	</ItemGroup>
 
 	<!-- 🔥 THÊM ĐOẠN NÀY -->

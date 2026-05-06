@@ -1,5 +1,5 @@
 ﻿
-using Server.model;
+using Server_Shared.model;
 
 namespace Server.Services
 {

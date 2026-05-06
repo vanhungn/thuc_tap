@@ -1,4 +1,4 @@
-﻿using Server.model;
+﻿using Server_Shared.model;
 using Server.Repository.ILopHocRepo;
 
 namespace Server.Services

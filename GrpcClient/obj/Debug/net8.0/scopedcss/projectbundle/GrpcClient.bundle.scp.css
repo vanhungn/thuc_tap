@@ -160,6 +160,7 @@ main[b-zafa3p4csu] {
         overflow-y: auto;
     }
 }
+/* /Pages/Chart.razor.rz.scp.css */
 /* /Pages/Home.razor.rz.scp.css */
 table[b-t4vt2ba2v3] {
     width: 100%;
@@ -317,22 +318,4 @@ input[b-t4vt2ba2v3] {
 
 .hideEnterForm[b-t4vt2ba2v3] {
     display: block;
-}
-/* /Pages/Weather.razor.rz.scp.css */
-.chartas[b-kwrb0wky1o] {
-    width: 50% !important;
-    height: 400px !important;
-    margin: 0 auto;
-}
-.chartBar[b-kwrb0wky1o] {
-    width: 100% !important;
-    height: 400px !important;
-    margin: 0 auto;
-}
-.title[b-kwrb0wky1o] {
-    text-align: center
-}
-.chart[b-kwrb0wky1o]{
-    display:grid;
-    grid-template-columns:1fr 1fr;
 }

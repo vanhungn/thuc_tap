@@ -1,0 +1,4 @@
+obj\Debug\net8.0\Protos/Lophoc.cs \
+obj\Debug\net8.0\Protos/LophocGrpc.cs: C:/Users/NGUYEN VAN HUNG/.nuget/packages/grpc.tools/2.49.0/build/native/include/google/protobuf/empty.proto\
+ C:/Users/NGUYEN VAN HUNG/.nuget/packages/grpc.tools/2.49.0/build/native/include/google/protobuf/timestamp.proto\
+ Protos/lophoc.proto

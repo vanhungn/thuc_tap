@@ -1,5 +1,5 @@
 ﻿using Microsoft.Data.SqlClient;
-using Server.model;
+using Server_Shared.model;
 using NHibernate;
 using NHibernate.Linq;
 namespace Server.Repository

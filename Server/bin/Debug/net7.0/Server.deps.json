@@ -13,7 +13,9 @@
           "Grpc.AspNetCore.Web": "2.49.0",
           "Microsoft.Data.SqlClient": "5.1.0",
           "NHibernate": "5.6.0",
-          "System.Data.SqlClient": "4.9.1"
+          "System.Data.SqlClient": "4.9.1",
+          "protobuf-net.Grpc": "1.2.2",
+          "protobuf-net.Grpc.AspNetCore": "1.2.2"
         },
         "runtime": {
           "Server.dll": {}
@@ -90,20 +92,20 @@
           "Grpc.Tools": "2.49.0"
         }
       },
-      "Grpc.AspNetCore.Server/2.49.0": {
+      "Grpc.AspNetCore.Server/2.66.0": {
         "dependencies": {
-          "Grpc.Net.Common": "2.49.0"
+          "Grpc.Net.Common": "2.66.0"
         },
         "runtime": {
           "lib/net7.0/Grpc.AspNetCore.Server.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.49.0.0"
+            "fileVersion": "2.66.0.0"
           }
         }
       },
       "Grpc.AspNetCore.Server.ClientFactory/2.49.0": {
         "dependencies": {
-          "Grpc.AspNetCore.Server": "2.49.0",
+          "Grpc.AspNetCore.Server": "2.66.0",
           "Grpc.Net.ClientFactory": "2.49.0"
         },
         "runtime": {
@@ -121,20 +123,17 @@
           }
         }
       },
-      "Grpc.Core.Api/2.49.0": {
-        "dependencies": {
-          "System.Memory": "4.5.4"
-        },
+      "Grpc.Core.Api/2.66.0": {
         "runtime": {
           "lib/netstandard2.1/Grpc.Core.Api.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.49.0.0"
+            "fileVersion": "2.66.0.0"
           }
         }
       },
       "Grpc.Net.Client/2.49.0": {
         "dependencies": {
-          "Grpc.Net.Common": "2.49.0",
+          "Grpc.Net.Common": "2.66.0",
           "Microsoft.Extensions.Logging.Abstractions": "3.0.3"
         },
         "runtime": {
@@ -156,14 +155,14 @@
           }
         }
       },
-      "Grpc.Net.Common/2.49.0": {
+      "Grpc.Net.Common/2.66.0": {
         "dependencies": {
-          "Grpc.Core.Api": "2.49.0"
+          "Grpc.Core.Api": "2.66.0"
         },
         "runtime": {
           "lib/net7.0/Grpc.Net.Common.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.49.0.0"
+            "fileVersion": "2.66.0.0"
           }
         }
       },
@@ -382,7 +381,7 @@
           }
         }
       },
-      "Microsoft.NETCore.Platforms/1.1.0": {},
+      "Microsoft.NETCore.Platforms/2.1.0": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
       "Microsoft.SqlServer.Server/1.0.0": {
         "runtime": {
@@ -394,7 +393,7 @@
       },
       "Microsoft.Win32.Primitives/4.0.1": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.0",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
         }
@@ -417,7 +416,7 @@
       },
       "NETStandard.Library/1.6.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.0",
           "Microsoft.Win32.Primitives": "4.0.1",
           "System.AppContext": "4.1.0",
           "System.Collections": "4.0.11",
@@ -478,6 +477,42 @@
           }
         }
       },
+      "protobuf-net/2.4.8": {
+        "dependencies": {
+          "System.ServiceModel.Primitives": "4.5.3"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/protobuf-net.dll": {
+            "assemblyVersion": "2.4.0.0",
+            "fileVersion": "2.4.8.1"
+          }
+        }
+      },
+      "protobuf-net.Grpc/1.2.2": {
+        "dependencies": {
+          "Grpc.Core.Api": "2.66.0",
+          "System.IO.Pipelines": "8.0.0",
+          "protobuf-net": "2.4.8"
+        },
+        "runtime": {
+          "lib/net6.0/protobuf-net.Grpc.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.2.2.5142"
+          }
+        }
+      },
+      "protobuf-net.Grpc.AspNetCore/1.2.2": {
+        "dependencies": {
+          "Grpc.AspNetCore.Server": "2.66.0",
+          "protobuf-net.Grpc": "1.2.2"
+        },
+        "runtime": {
+          "lib/net6.0/protobuf-net.Grpc.AspNetCore.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.2.2.5142"
+          }
+        }
+      },
       "Remotion.Linq/2.2.0": {
         "dependencies": {
           "System.Collections": "4.0.11",
@@ -518,7 +553,7 @@
       },
       "runtime.native.System/4.0.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.0",
           "Microsoft.NETCore.Targets": "1.1.0"
         }
       },
@@ -531,19 +566,19 @@
       },
       "runtime.native.System.IO.Compression/4.1.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.0",
           "Microsoft.NETCore.Targets": "1.1.0"
         }
       },
       "runtime.native.System.Net.Http/4.0.1": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.0",
           "Microsoft.NETCore.Targets": "1.1.0"
         }
       },
       "runtime.native.System.Security.Cryptography/4.0.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.0",
           "Microsoft.NETCore.Targets": "1.1.0"
         }
       },
@@ -590,7 +625,7 @@
       },
       "System.Collections/4.0.11": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.0",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
         }
@@ -623,7 +658,7 @@
       },
       "System.Console/4.0.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.0",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.IO": "4.1.0",
           "System.Runtime": "4.3.0",
@@ -657,7 +692,7 @@
       },
       "System.Diagnostics.Debug/4.0.11": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.0",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
         }
@@ -669,14 +704,14 @@
       },
       "System.Diagnostics.Tools/4.0.1": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.0",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
         }
       },
       "System.Diagnostics.Tracing/4.1.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.0",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
         }
@@ -709,14 +744,14 @@
       "System.Formats.Asn1/5.0.0": {},
       "System.Globalization/4.0.11": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.0",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
         }
       },
       "System.Globalization.Calendars/4.0.1": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.0",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Globalization": "4.0.11",
           "System.Runtime": "4.3.0"
@@ -724,7 +759,7 @@
       },
       "System.Globalization.Extensions/4.0.1": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.0",
           "System.Globalization": "4.0.11",
           "System.Resources.ResourceManager": "4.0.1",
           "System.Runtime": "4.3.0",
@@ -746,7 +781,7 @@
       },
       "System.IO/4.1.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.0",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0",
           "System.Text.Encoding": "4.3.0",
@@ -755,7 +790,7 @@
       },
       "System.IO.Compression/4.1.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.0",
           "System.Collections": "4.0.11",
           "System.Diagnostics.Debug": "4.0.11",
           "System.IO": "4.1.0",
@@ -786,7 +821,7 @@
       },
       "System.IO.FileSystem/4.0.1": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.0",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.IO": "4.1.0",
           "System.IO.FileSystem.Primitives": "4.0.1",
@@ -799,6 +834,14 @@
       "System.IO.FileSystem.Primitives/4.0.1": {
         "dependencies": {
           "System.Runtime": "4.3.0"
+        }
+      },
+      "System.IO.Pipelines/8.0.0": {
+        "runtime": {
+          "lib/net7.0/System.IO.Pipelines.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.53103"
+          }
         }
       },
       "System.Linq/4.1.0": {
@@ -858,7 +901,7 @@
       },
       "System.Net.Http/4.1.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.0",
           "System.Collections": "4.0.11",
           "System.Diagnostics.Debug": "4.0.11",
           "System.Diagnostics.DiagnosticSource": "6.0.0",
@@ -888,7 +931,7 @@
       },
       "System.Net.Primitives/4.0.11": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.0",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0",
           "System.Runtime.Handles": "4.0.1"
@@ -896,7 +939,7 @@
       },
       "System.Net.Sockets/4.1.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.0",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.IO": "4.1.0",
           "System.Net.Primitives": "4.0.11",
@@ -914,15 +957,37 @@
           "System.Threading": "4.0.11"
         }
       },
+      "System.Private.ServiceModel/4.5.3": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.1.0",
+          "System.Reflection.DispatchProxy": "4.5.0",
+          "System.Security.Principal.Windows": "5.0.0"
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netstandard2.0/System.Private.ServiceModel.dll": {
+            "rid": "unix",
+            "assetType": "runtime",
+            "assemblyVersion": "4.5.0.3",
+            "fileVersion": "4.6.26720.1"
+          },
+          "runtimes/win/lib/netstandard2.0/System.Private.ServiceModel.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "4.5.0.3",
+            "fileVersion": "4.6.26720.1"
+          }
+        }
+      },
       "System.Reflection/4.1.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.0",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.IO": "4.1.0",
           "System.Reflection.Primitives": "4.0.1",
           "System.Runtime": "4.3.0"
         }
       },
+      "System.Reflection.DispatchProxy/4.5.0": {},
       "System.Reflection.Emit/4.0.1": {
         "dependencies": {
           "System.IO": "4.1.0",
@@ -949,7 +1014,7 @@
       },
       "System.Reflection.Extensions/4.0.1": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.0",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Reflection": "4.1.0",
           "System.Runtime": "4.3.0"
@@ -957,7 +1022,7 @@
       },
       "System.Reflection.Primitives/4.0.1": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.0",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
         }
@@ -970,7 +1035,7 @@
       },
       "System.Resources.ResourceManager/4.0.1": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.0",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Globalization": "4.0.11",
           "System.Reflection": "4.1.0",
@@ -979,7 +1044,7 @@
       },
       "System.Runtime/4.3.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.0",
           "Microsoft.NETCore.Targets": "1.1.0"
         }
       },
@@ -1005,21 +1070,21 @@
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
       "System.Runtime.Extensions/4.1.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.0",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
         }
       },
       "System.Runtime.Handles/4.0.1": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.0",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
         }
       },
       "System.Runtime.InteropServices/4.1.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.0",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Reflection": "4.1.0",
           "System.Reflection.Primitives": "4.0.1",
@@ -1029,7 +1094,7 @@
       },
       "System.Runtime.InteropServices.RuntimeInformation/4.0.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.0",
           "System.Reflection": "4.1.0",
           "System.Resources.ResourceManager": "4.0.1",
           "System.Runtime": "4.3.0",
@@ -1049,7 +1114,7 @@
       "System.Security.AccessControl/6.0.0": {},
       "System.Security.Cryptography.Algorithms/4.2.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.0",
           "System.Collections": "4.0.11",
           "System.IO": "4.1.0",
           "System.Resources.ResourceManager": "4.0.1",
@@ -1071,7 +1136,7 @@
       },
       "System.Security.Cryptography.Csp/4.0.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.0",
           "System.IO": "4.1.0",
           "System.Reflection": "4.1.0",
           "System.Resources.ResourceManager": "4.0.1",
@@ -1088,7 +1153,7 @@
       },
       "System.Security.Cryptography.Encoding/4.0.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.0",
           "System.Collections": "4.0.11",
           "System.Collections.Concurrent": "4.0.12",
           "System.Linq": "4.1.0",
@@ -1148,7 +1213,7 @@
       },
       "System.Security.Cryptography.X509Certificates/4.1.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.0",
           "System.Collections": "4.0.11",
           "System.Diagnostics.Debug": "4.0.11",
           "System.Globalization": "4.0.11",
@@ -1188,9 +1253,24 @@
         }
       },
       "System.Security.Principal.Windows/5.0.0": {},
+      "System.ServiceModel.Primitives/4.5.3": {
+        "dependencies": {
+          "System.Private.ServiceModel": "4.5.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.ServiceModel.Primitives.dll": {
+            "assemblyVersion": "4.5.0.3",
+            "fileVersion": "4.6.26720.1"
+          },
+          "lib/netstandard2.0/System.ServiceModel.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.26720.1"
+          }
+        }
+      },
       "System.Text.Encoding/4.3.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.0",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
         }
@@ -1202,7 +1282,7 @@
       },
       "System.Text.Encoding.Extensions/4.0.11": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.0",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0",
           "System.Text.Encoding": "4.3.0"
@@ -1232,7 +1312,7 @@
       },
       "System.Threading.Tasks/4.0.11": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.0",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
         }
@@ -1240,7 +1320,7 @@
       "System.Threading.Tasks.Extensions/4.5.4": {},
       "System.Threading.Timer/4.0.1": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.0",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
         }
@@ -1349,12 +1429,12 @@
       "path": "grpc.aspnetcore/2.49.0",
       "hashPath": "grpc.aspnetcore.2.49.0.nupkg.sha512"
     },
-    "Grpc.AspNetCore.Server/2.49.0": {
+    "Grpc.AspNetCore.Server/2.66.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-it0nmQi10S/cgC1nk/nVgQiYv5sd/IWnob8SsB3JEpbIFAAKaU6ZjdTKRiATunNtDb/IYBLGeo8BMDoxfewxyw==",
-      "path": "grpc.aspnetcore.server/2.49.0",
-      "hashPath": "grpc.aspnetcore.server.2.49.0.nupkg.sha512"
+      "sha512": "sha512-SogFEs8bLvcRtEWMdueOJeMxiaLryvyivWtmBwz/vLtS5xlN4Zrfv+npMbn1PS4iT99AqBY+R+bRxdIFfvfeIA==",
+      "path": "grpc.aspnetcore.server/2.66.0",
+      "hashPath": "grpc.aspnetcore.server.2.66.0.nupkg.sha512"
     },
     "Grpc.AspNetCore.Server.ClientFactory/2.49.0": {
       "type": "package",
@@ -1370,12 +1450,12 @@
       "path": "grpc.aspnetcore.web/2.49.0",
       "hashPath": "grpc.aspnetcore.web.2.49.0.nupkg.sha512"
     },
-    "Grpc.Core.Api/2.49.0": {
+    "Grpc.Core.Api/2.66.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-6OTcSQ8iML+xzmELhH4anUZlNM3dHDKPFBsMLSdiT80LJaaZKxwZml/K9ZdfLIjSR/EzdMZzzU2Avbedz4N7BA==",
-      "path": "grpc.core.api/2.49.0",
-      "hashPath": "grpc.core.api.2.49.0.nupkg.sha512"
+      "sha512": "sha512-HsjsQVAHe4hqP4t4rpUnmq+MZvPdyrlPsWF4T5fbMvyP3o/lMV+KVJfDlaNH8+v0aGQTVT3EsDFufbhaWb52cw==",
+      "path": "grpc.core.api/2.66.0",
+      "hashPath": "grpc.core.api.2.66.0.nupkg.sha512"
     },
     "Grpc.Net.Client/2.49.0": {
       "type": "package",
@@ -1391,12 +1471,12 @@
       "path": "grpc.net.clientfactory/2.49.0",
       "hashPath": "grpc.net.clientfactory.2.49.0.nupkg.sha512"
     },
-    "Grpc.Net.Common/2.49.0": {
+    "Grpc.Net.Common/2.66.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-G0TVTS8fjCk8b7td/E7C8/ssJPm3JnGVBKsveoj/89PIwIee72qkXG+tVn5c1gwTanEFPdyPoydna/bmU/NAaw==",
-      "path": "grpc.net.common/2.49.0",
-      "hashPath": "grpc.net.common.2.49.0.nupkg.sha512"
+      "sha512": "sha512-YJpQpIvpo0HKlsG6SHwaieyji08qfv0DdEDIewCAA0egQY08637sHOj1netLGUhzBEsCqlGC3e92TZ2uqhxnvw==",
+      "path": "grpc.net.common/2.66.0",
+      "hashPath": "grpc.net.common.2.66.0.nupkg.sha512"
     },
     "Grpc.Tools/2.49.0": {
       "type": "package",
@@ -1566,12 +1646,12 @@
       "path": "microsoft.identitymodel.tokens/6.24.0",
       "hashPath": "microsoft.identitymodel.tokens.6.24.0.nupkg.sha512"
     },
-    "Microsoft.NETCore.Platforms/1.1.0": {
+    "Microsoft.NETCore.Platforms/2.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
-      "path": "microsoft.netcore.platforms/1.1.0",
-      "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
+      "sha512": "sha512-ok+RPAtESz/9MUXeIEz6Lv5XAGQsaNmEYXMsgVALj4D7kqC8gveKWXWXbufLySR2fWrwZf8smyN5RmHu0e4BHA==",
+      "path": "microsoft.netcore.platforms/2.1.0",
+      "hashPath": "microsoft.netcore.platforms.2.1.0.nupkg.sha512"
     },
     "Microsoft.NETCore.Targets/1.1.0": {
       "type": "package",
@@ -1614,6 +1694,27 @@
       "sha512": "sha512-uDUFQQYSuLa2gdWrdHKJzvOqFkeVYMd3yWqGxtgyIG3cp+MxxQXNGe3iNYcy3f/U/yHjQpQUryMyvlBZVzz0FA==",
       "path": "nhibernate/5.6.0",
       "hashPath": "nhibernate.5.6.0.nupkg.sha512"
+    },
+    "protobuf-net/2.4.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-O+vbVVDxTWlFRBe5OsAmMKqqD7WQ7TPIH97Nr/Pk8gDxtNW77seiDmXfxnODuWIkm0fYW7kE5ILq8jHsgH79yg==",
+      "path": "protobuf-net/2.4.8",
+      "hashPath": "protobuf-net.2.4.8.nupkg.sha512"
+    },
+    "protobuf-net.Grpc/1.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ywpDWMKewrojQQyAKicELuTuaH+heEQfcuB+aJdENN9OfNOIuWLnwLdnHOzJ1162hD/1trzYDFMV5g8vmTxJTQ==",
+      "path": "protobuf-net.grpc/1.2.2",
+      "hashPath": "protobuf-net.grpc.1.2.2.nupkg.sha512"
+    },
+    "protobuf-net.Grpc.AspNetCore/1.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pgWnFOD6FwazC5OQaKWv93eMaoKfGGcdRRwaVg8m52+KAJobjDFbYpPwVCQ68Lw8am6hAcM8UvPRL9XiIA9wiQ==",
+      "path": "protobuf-net.grpc.aspnetcore/1.2.2",
+      "hashPath": "protobuf-net.grpc.aspnetcore.1.2.2.nupkg.sha512"
     },
     "Remotion.Linq/2.2.0": {
       "type": "package",
@@ -1839,6 +1940,13 @@
       "path": "system.io.filesystem.primitives/4.0.1",
       "hashPath": "system.io.filesystem.primitives.4.0.1.nupkg.sha512"
     },
+    "System.IO.Pipelines/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FHNOatmUq0sqJOkTx+UF/9YK1f180cnW5FVqnQMvYUN0elp6wFzbtPSiqbo1/ru8ICp43JM1i7kKkk6GsNGHlA==",
+      "path": "system.io.pipelines/8.0.0",
+      "hashPath": "system.io.pipelines.8.0.0.nupkg.sha512"
+    },
     "System.Linq/4.1.0": {
       "type": "package",
       "serviceable": true,
@@ -1909,12 +2017,26 @@
       "path": "system.objectmodel/4.0.12",
       "hashPath": "system.objectmodel.4.0.12.nupkg.sha512"
     },
+    "System.Private.ServiceModel/4.5.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ancrQgJagx+yC4SZbuE+eShiEAUIF0E1d21TRSoy1C/rTwafAVcBr/fKibkq5TQzyy9uNil2tx2/iaUxsy0S9g==",
+      "path": "system.private.servicemodel/4.5.3",
+      "hashPath": "system.private.servicemodel.4.5.3.nupkg.sha512"
+    },
     "System.Reflection/4.1.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-JCKANJ0TI7kzoQzuwB/OoJANy1Lg338B6+JVacPl4TpUwi3cReg3nMLplMq2uqYfHFQpKIlHAUVAJlImZz/4ng==",
       "path": "system.reflection/4.1.0",
       "hashPath": "system.reflection.4.1.0.nupkg.sha512"
+    },
+    "System.Reflection.DispatchProxy/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+UW1hq11TNSeb+16rIk8hRQ02o339NFyzMc4ma/FqmxBzM30l1c2IherBB4ld1MNcenS48fz8tbt50OW4rVULA==",
+      "path": "system.reflection.dispatchproxy/4.5.0",
+      "hashPath": "system.reflection.dispatchproxy.4.5.0.nupkg.sha512"
     },
     "System.Reflection.Emit/4.0.1": {
       "type": "package",
@@ -2097,6 +2219,13 @@
       "sha512": "sha512-t0MGLukB5WAVU9bO3MGzvlGnyJPgUlcwerXn1kzBRjwLKixT96XV0Uza41W49gVd8zEMFu9vQEFlv0IOrytICA==",
       "path": "system.security.principal.windows/5.0.0",
       "hashPath": "system.security.principal.windows.5.0.0.nupkg.sha512"
+    },
+    "System.ServiceModel.Primitives/4.5.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Wc9Hgg4Cmqi416zvEgq2sW1YYCGuhwWzspDclJWlFZqY6EGhFUPZU+kVpl5z9kAgrSOQP7/Uiik+PtSQtmq+5A==",
+      "path": "system.servicemodel.primitives/4.5.3",
+      "hashPath": "system.servicemodel.primitives.4.5.3.nupkg.sha512"
     },
     "System.Text.Encoding/4.3.0": {
       "type": "package",

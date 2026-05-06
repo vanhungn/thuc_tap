@@ -1,0 +1,13 @@
+C:\Users\NGUYEN VAN HUNG\source\repos\baitap1\Server_Shared\bin\Debug\net8.0\Server_Shared.deps.json
+C:\Users\NGUYEN VAN HUNG\source\repos\baitap1\Server_Shared\bin\Debug\net8.0\Server_Shared.dll
+C:\Users\NGUYEN VAN HUNG\source\repos\baitap1\Server_Shared\bin\Debug\net8.0\Server_Shared.pdb
+C:\Users\NGUYEN VAN HUNG\source\repos\baitap1\Server_Shared\obj\Debug\net8.0\Server_Shared.csproj.AssemblyReference.cache
+C:\Users\NGUYEN VAN HUNG\source\repos\baitap1\Server_Shared\obj\Debug\net8.0\Server_Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\NGUYEN VAN HUNG\source\repos\baitap1\Server_Shared\obj\Debug\net8.0\Server_Shared.AssemblyInfoInputs.cache
+C:\Users\NGUYEN VAN HUNG\source\repos\baitap1\Server_Shared\obj\Debug\net8.0\Server_Shared.AssemblyInfo.cs
+C:\Users\NGUYEN VAN HUNG\source\repos\baitap1\Server_Shared\obj\Debug\net8.0\Server_Shared.csproj.CoreCompileInputs.cache
+C:\Users\NGUYEN VAN HUNG\source\repos\baitap1\Server_Shared\obj\Debug\net8.0\Server_Shared.sourcelink.json
+C:\Users\NGUYEN VAN HUNG\source\repos\baitap1\Server_Shared\obj\Debug\net8.0\Server_Shared.dll
+C:\Users\NGUYEN VAN HUNG\source\repos\baitap1\Server_Shared\obj\Debug\net8.0\refint\Server_Shared.dll
+C:\Users\NGUYEN VAN HUNG\source\repos\baitap1\Server_Shared\obj\Debug\net8.0\Server_Shared.pdb
+C:\Users\NGUYEN VAN HUNG\source\repos\baitap1\Server_Shared\obj\Debug\net8.0\ref\Server_Shared.dll

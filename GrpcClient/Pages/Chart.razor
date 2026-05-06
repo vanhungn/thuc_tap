@@ -1,0 +1,43 @@
+﻿@page "/chart"
+@using AntDesign
+@using AntDesign.Charts
+@using Server_Shared.model
+@using Title = AntDesign.Charts.Title
+
+<PageTitle>Chart</PageTitle>
+
+<Card>
+    <TitleTemplate>
+        <Text Strong Style="font-size:18px;">Thong ke sinh vien</Text>
+    </TitleTemplate>
+    <Body>
+        <Tabs>
+            <TabPane Key="1">
+                <TabTemplate>Bar Chart</TabTemplate>
+                <ChildContent>
+                    @if (chartData.Any())
+                    {
+                        <AntDesign.Charts.Column Data="chartData" Config="columnConfig" />
+                    }
+                    else
+                    {
+                        <Spin />
+                    }
+                </ChildContent>
+            </TabPane>
+            <TabPane Key="2">
+                <TabTemplate>Pie Chart</TabTemplate>
+                <ChildContent>
+                    @if (chartData.Any())
+                    {
+                        <AntDesign.Charts.Pie Data="chartData" Config="pieConfig" />
+                    }
+                    else
+                    {
+                        <Spin />
+                    }
+                </ChildContent>
+            </TabPane>
+        </Tabs>
+    </Body>
+</Card>

@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "rLD+s9xBlic=",
+  "dgSpecHash": "8+9HBPTj3Z0=",
   "success": true,
   "projectFilePath": "C:\\Users\\NGUYEN VAN HUNG\\source\\repos\\baitap1\\GrpcClient\\GrpcClient.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\NGUYEN VAN HUNG\\.nuget\\packages\\antdesign\\1.6.1\\antdesign.1.6.1.nupkg.sha512",
+    "C:\\Users\\NGUYEN VAN HUNG\\.nuget\\packages\\antdesign.charts\\0.9.0\\antdesign.charts.0.9.0.nupkg.sha512",
     "C:\\Users\\NGUYEN VAN HUNG\\.nuget\\packages\\blazorise\\2.1.1\\blazorise.2.1.1.nupkg.sha512",
     "C:\\Users\\NGUYEN VAN HUNG\\.nuget\\packages\\blazorise.bootstrap\\2.1.1\\blazorise.bootstrap.2.1.1.nupkg.sha512",
     "C:\\Users\\NGUYEN VAN HUNG\\.nuget\\packages\\blazorise.charts\\2.1.1\\blazorise.charts.2.1.1.nupkg.sha512",
@@ -15,7 +16,6 @@
     "C:\\Users\\NGUYEN VAN HUNG\\.nuget\\packages\\grpc.net.client\\2.80.0\\grpc.net.client.2.80.0.nupkg.sha512",
     "C:\\Users\\NGUYEN VAN HUNG\\.nuget\\packages\\grpc.net.client.web\\2.80.0\\grpc.net.client.web.2.80.0.nupkg.sha512",
     "C:\\Users\\NGUYEN VAN HUNG\\.nuget\\packages\\grpc.net.common\\2.80.0\\grpc.net.common.2.80.0.nupkg.sha512",
-    "C:\\Users\\NGUYEN VAN HUNG\\.nuget\\packages\\grpc.tools\\2.80.0\\grpc.tools.2.80.0.nupkg.sha512",
     "C:\\Users\\NGUYEN VAN HUNG\\.nuget\\packages\\lambda2js\\3.1.4\\lambda2js.3.1.4.nupkg.sha512",
     "C:\\Users\\NGUYEN VAN HUNG\\.nuget\\packages\\microsoft.aspnetcore.authorization\\8.0.26\\microsoft.aspnetcore.authorization.8.0.26.nupkg.sha512",
     "C:\\Users\\NGUYEN VAN HUNG\\.nuget\\packages\\microsoft.aspnetcore.components\\8.0.26\\microsoft.aspnetcore.components.8.0.26.nupkg.sha512",
@@ -32,6 +32,7 @@
     "C:\\Users\\NGUYEN VAN HUNG\\.nuget\\packages\\microsoft.extensions.configuration.json\\8.0.1\\microsoft.extensions.configuration.json.8.0.1.nupkg.sha512",
     "C:\\Users\\NGUYEN VAN HUNG\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.1\\microsoft.extensions.dependencyinjection.8.0.1.nupkg.sha512",
     "C:\\Users\\NGUYEN VAN HUNG\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\NGUYEN VAN HUNG\\.nuget\\packages\\microsoft.extensions.dependencymodel\\7.0.0\\microsoft.extensions.dependencymodel.7.0.0.nupkg.sha512",
     "C:\\Users\\NGUYEN VAN HUNG\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\8.0.0\\microsoft.extensions.fileproviders.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\NGUYEN VAN HUNG\\.nuget\\packages\\microsoft.extensions.fileproviders.physical\\8.0.0\\microsoft.extensions.fileproviders.physical.8.0.0.nupkg.sha512",
     "C:\\Users\\NGUYEN VAN HUNG\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\8.0.0\\microsoft.extensions.filesystemglobbing.8.0.0.nupkg.sha512",
@@ -42,10 +43,18 @@
     "C:\\Users\\NGUYEN VAN HUNG\\.nuget\\packages\\microsoft.jsinterop\\8.0.26\\microsoft.jsinterop.8.0.26.nupkg.sha512",
     "C:\\Users\\NGUYEN VAN HUNG\\.nuget\\packages\\microsoft.jsinterop.webassembly\\8.0.26\\microsoft.jsinterop.webassembly.8.0.26.nupkg.sha512",
     "C:\\Users\\NGUYEN VAN HUNG\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.26\\microsoft.net.illink.tasks.8.0.26.nupkg.sha512",
-    "C:\\Users\\NGUYEN VAN HUNG\\.nuget\\packages\\microsoft.net.sdk.webassembly.pack\\9.0.15\\microsoft.net.sdk.webassembly.pack.9.0.15.nupkg.sha512",
+    "C:\\Users\\NGUYEN VAN HUNG\\.nuget\\packages\\microsoft.net.sdk.webassembly.pack\\8.0.26\\microsoft.net.sdk.webassembly.pack.8.0.26.nupkg.sha512",
+    "C:\\Users\\NGUYEN VAN HUNG\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.0\\microsoft.netcore.platforms.2.1.0.nupkg.sha512",
     "C:\\Users\\NGUYEN VAN HUNG\\.nuget\\packages\\oneof\\3.0.271\\oneof.3.0.271.nupkg.sha512",
+    "C:\\Users\\NGUYEN VAN HUNG\\.nuget\\packages\\protobuf-net\\2.4.8\\protobuf-net.2.4.8.nupkg.sha512",
+    "C:\\Users\\NGUYEN VAN HUNG\\.nuget\\packages\\protobuf-net.grpc\\1.2.2\\protobuf-net.grpc.1.2.2.nupkg.sha512",
     "C:\\Users\\NGUYEN VAN HUNG\\.nuget\\packages\\system.io.pipelines\\8.0.0\\system.io.pipelines.8.0.0.nupkg.sha512",
-    "C:\\Users\\NGUYEN VAN HUNG\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.26\\microsoft.netcore.app.runtime.mono.browser-wasm.8.0.26.nupkg.sha512"
+    "C:\\Users\\NGUYEN VAN HUNG\\.nuget\\packages\\system.private.servicemodel\\4.5.3\\system.private.servicemodel.4.5.3.nupkg.sha512",
+    "C:\\Users\\NGUYEN VAN HUNG\\.nuget\\packages\\system.reflection.dispatchproxy\\4.5.0\\system.reflection.dispatchproxy.4.5.0.nupkg.sha512",
+    "C:\\Users\\NGUYEN VAN HUNG\\.nuget\\packages\\system.security.principal.windows\\4.5.0\\system.security.principal.windows.4.5.0.nupkg.sha512",
+    "C:\\Users\\NGUYEN VAN HUNG\\.nuget\\packages\\system.servicemodel.primitives\\4.5.3\\system.servicemodel.primitives.4.5.3.nupkg.sha512",
+    "C:\\Users\\NGUYEN VAN HUNG\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
+    "C:\\Users\\NGUYEN VAN HUNG\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"
   ],
   "logs": []
 }

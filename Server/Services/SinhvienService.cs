@@ -1,6 +1,6 @@
 ﻿using Server.Repository;
 using Server.Services;
-using Server.model;
+using Server_Shared.model;
 using Server.Repository.ISinhVienRepo;
 
 namespace Server.Services
